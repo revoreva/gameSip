@@ -18,13 +18,15 @@ public class Target : MonoBehaviour {
     private int arah = 1;
     
     public GameObject pivot;
+	public GameObject damager;
 	public GameObject kamera;
+	public int Benar;
+	public int jumlah;
     
 	void Start () {
 		//	Get the SpriteRenderer component for the GameObject's Rigidbody
 		spriteRenderer = GetComponent <SpriteRenderer> ();
-        //go = GetComponent <GameObject> ();
-		//	Initialize the Hit Points
+        //	Initialize the Hit Points
 		currentHitPoints = hitPoints;
 
 		//	Calculate the Damage Impact Speed Squared from the Damage Impact Speed
@@ -61,8 +63,11 @@ public class Target : MonoBehaviour {
 		//	We have taken damage, so change the sprite to the damaged sprite
 		//spriteRenderer.sprite = damagedSprite;
         Destroy(spriteRenderer);
-		kamera.GetComponent<KameraJalan> ().enabled = true;
-		//Application.LoadLevel("main");
+		Destroy (damager);
+		if(Benar == 1)
+			Application.LoadLevel("Main");
+		else
+			Application.LoadLevel("gameOver");
 		//	Decriment the Current Health of the target
 		//currentHitPoints--;
 

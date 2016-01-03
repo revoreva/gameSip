@@ -31,7 +31,7 @@ public class DestroyPesawat : MonoBehaviour {
 		Debug.Log("Hello-hallo-hallo");
 		if (other.gameObject.tag == "capit") {
 			//Destroy(other.gameObject);
-			Application.LoadLevel("main");
+			Application.LoadLevel("gameOver");
 		}
 	}
 }

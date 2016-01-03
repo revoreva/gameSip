@@ -22,7 +22,7 @@ public class Resetter : MonoBehaviour {
 		//	If we hold down the "R" key...
 		if (Input.GetKeyDown (KeyCode.R)) {
 			//	... call the Reset() function
-			Reset ();
+			//Reset ();
 		}
 
 		//	If the spring had been destroyed (indicating we have launched the projectile) and our projectile's velocity is below the threshold...
@@ -42,6 +42,6 @@ public class Resetter : MonoBehaviour {
 	
 	void Reset () {
 		//	The reset function will Reset the game by reloading the same level
-		Application.LoadLevel (Application.loadedLevel);
+		Application.LoadLevel ("GameOver");
 	}
 }

@@ -16,6 +16,6 @@ public class waitGameOver : MonoBehaviour {
 			Debug.Log(time);
 		}
 		else
-			Application.LoadLevel("Main");
+			Application.LoadLevel("Awal");
 	}
 }
